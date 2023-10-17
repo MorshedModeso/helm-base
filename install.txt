@@ -1,0 +1,20 @@
+1- Create a Repo in artifact registery
+
+2- helm create hello-chart
+
+3- helm package hello-chart/
+
+4- gcloud auth print-access-token | helm registry login -u oauth2accesstoken --password-stdin https://us-central1-docker.pkg.dev
+
+5- helm push hello-chart-0.1.0.tgz oci://us-central1-docker.pkg.dev/devops-training-330915/helm-base
+
+6- gcloud artifacts docker images list us-central1-docker.pkg.dev/devops-training-330915/helm-base 
+
+7- helm install hello-chart oci://us-central1-docker.pkg.dev/devops-training-330915/helm-base/hello-chart --version 0.1.0 (NOT RAN)
+
+8-  dependencies:
+    - name: hello-chart
+      version: 0.1.0
+      repository: "oci://us-central1-docker.pkg.dev/devops-training-330915/helm-base"
+
+9- helm dependency update <chart>

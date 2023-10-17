@@ -1,0 +1,6 @@
+dependencies:
+- name: hello-chart
+  repository: oci://us-central1-docker.pkg.dev/devops-training-330915/helm-base
+  version: 0.2.0
+digest: sha256:0617651a1c89d93ac9178e9637f0c547a73ac6f942a0d5e8fa2da76c495df994
+generated: "2023-10-17T14:48:11.309605748+03:00"
