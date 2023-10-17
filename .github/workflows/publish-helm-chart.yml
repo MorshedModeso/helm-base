@@ -3,7 +3,7 @@ name: Publish Helm Chart to Artifact Registry
 on:
   push:
     branches:
-      - main  # Change to your main branch name
+      - master  # Change to your main branch name
 
 jobs:
   publish:
@@ -13,7 +13,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-
+      - id: 'auth'
+        name: 'Authenticate to Google Cloud'
+        uses: 'google-github-actions/auth@v1'
+        with:
+            credentials_json: '${{ secrets.GOOGLE_CREDENTIALS }}'
 
       - name: Install and configure Helm
         run: |
@@ -29,9 +33,9 @@ jobs:
       - name: Publish Helm Chart to Artifact Registry
         run: |
           helm push hello-chart-0.1.0.tgz oci://us-central1-docker.pkg.dev/devops-training-330915/helm-base --version 0.1.0 --username _json_key --password="${{ secrets.GCP_SA_KEY }}
-          gcloud artifacts repositories create your-repo-name --location=${{ secrets.GCP_REGION }}
-          gcloud auth configure-docker ${{ secrets.GCP_REGION }}-docker.pkg.dev --quiet
-      - name: Cleanup
-        run: |
-          rm $HOME/.docker/config.json
+          gcloud artifacts repositories create your-repo-name --location=us-central1
+          gcloud auth configure-docker us-central1-docker.pkg.dev --quiet
+    #   - name: Cleanup
+    #     run: |
+    #       rm $HOME/.docker/config.json
 
