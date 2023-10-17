@@ -18,6 +18,7 @@ jobs:
     #     with:
     #       credentials_json: "${{ secrets.GOOGLE_CREDENTIALS  }}"
       - name: Package Helm Chart
+        secrets: inherit
         run: |
           cat ${{ secrets.test }}
           cat "${{ secrets.test }}"
