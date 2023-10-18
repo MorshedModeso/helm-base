@@ -6,8 +6,9 @@ on:
       - master  # Change to your main branch name
 
 jobs:
-  if: github.event.pull_request.merged == 'true'
+  
   publish:
+    if: github.event.pull_request.merged == 'true'
     runs-on: ubuntu-latest
 
     steps:
