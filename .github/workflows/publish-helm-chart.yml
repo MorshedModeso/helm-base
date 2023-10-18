@@ -26,7 +26,7 @@ jobs:
         - name: Package Helm Chart
           run: |
             helm package hello-chart
-            gcloud auth print-access-token | helm registry login -u oauth2accesstoken --password-stdin https://us-central1-docker.pkg.dev
+           # gcloud auth print-access-token | helm registry login -u oauth2accesstoken --password-stdin https://us-central1-docker.pkg.dev
 
         # - name: Publish Helm Chart to Artifact Registry
         #   run: |
