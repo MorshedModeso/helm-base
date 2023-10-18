@@ -30,6 +30,12 @@ jobs:
         - name: Package Helm Chart
           run: |
             helm package hello-chart
+            helm repo index .
+            git config --global user.name mohamed.morshed
+            git config --global user.email mohamed.morshed@modeso.ch
+            git add .
+            git commit -m "push for mohamed"
+            git push 
 
         - name: Publish Helm Chart to Artifact Registry
           run: |
