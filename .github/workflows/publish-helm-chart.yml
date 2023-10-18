@@ -34,7 +34,6 @@ jobs:
             git config --global user.name mohamed.morshed
             git config --global user.email mohamed.morshed@modeso.ch
             git add .
-            git add /home/runner/work/helm-base/helm-base/hello-chart-$VERSION.tgz 
             git commit -m "push"
             git push 
             
