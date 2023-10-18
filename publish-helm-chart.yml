@@ -23,10 +23,6 @@ jobs:
             tar -zxvf helm-v3.7.1-linux-amd64.tar.gz
             sudo mv linux-amd64/helm /usr/local/bin/helm
             helm version   
-        - name: Set variables
-          run: |
-            VER=$(cat helm-base/hello-chart/Chart.yaml | grep "version:"| awk '{print $2}')
-            echo "VERSION=$VER" >> $GITHUB_ENV    
         - name: Package Helm Chart
           run: |
             helm package hello-chart
@@ -36,7 +32,7 @@ jobs:
              export HELM_EXPERIMENTAL_OCI=1
              gcloud auth print-access-token | helm registry login -u oauth2accesstoken --password-stdin https://us-central1-docker.pkg.dev
              gcloud auth configure-docker us-central1-docker.pkg.dev
-             helm push --debug hello-chart-${{env.VERSION}}.tgz oci://us-central1-docker.pkg.dev/devops-training-330915/helm-base 
+             helm push --debug hello-chart-0.2.0.tgz oci://us-central1-docker.pkg.dev/devops-training-330915/helm-base 
             # gcloud artifacts repositories create your-repo-name --location=us-central1
             
 
