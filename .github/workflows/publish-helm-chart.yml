@@ -29,7 +29,6 @@ jobs:
             echo "VERSION=$VER" >> $GITHUB_ENV    
         - name: Package Helm Chart
           run: |
-            rm *.tgz
             helm package hello-chart 
             helm repo index .
             git config --global user.name mohamed.morshed
