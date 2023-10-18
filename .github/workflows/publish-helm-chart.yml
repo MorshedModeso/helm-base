@@ -39,8 +39,6 @@ jobs:
             git commit -m "push"
             git push 
             
-            
-
         # - name: Publish Helm Chart to Artifact Registry
         #   run: |
         #      export HELM_EXPERIMENTAL_OCI=1
