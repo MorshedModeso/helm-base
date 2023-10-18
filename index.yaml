@@ -3,9 +3,9 @@ entries:
   hello-chart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-18T13:37:52.872806858Z"
+    created: "2023-10-18T13:41:34.596120808Z"
     description: A Helm chart for Kubernetes
-    digest: 4b0337f5e5f861cedccf50b4fce6bd955a9c7d25ea1a1449b76259f6009af3df
+    digest: 8d16cc9259084e1c0ace901ec2040cf8b2ff2b6a690ea57e3a11437f99167229
     name: hello-chart
     type: application
     urls:
@@ -13,7 +13,7 @@ entries:
     version: 0.13.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-18T13:37:52.872219845Z"
+    created: "2023-10-18T13:41:34.595484698Z"
     description: A Helm chart for Kubernetes
     digest: 7092d9539253ef2fccfba9da32bd9db556b3807be8e54a45ddb5d26d0ca58c93
     name: hello-chart
@@ -21,4 +21,4 @@ entries:
     urls:
     - hello-chart-0.12.0.tgz
     version: 0.12.0
-generated: "2023-10-18T13:37:52.870978118Z"
+generated: "2023-10-18T13:41:34.594322082Z"
