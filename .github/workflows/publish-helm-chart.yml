@@ -34,8 +34,9 @@ jobs:
             git config --global user.name mohamed.morshed
             git config --global user.email mohamed.morshed@modeso.ch
             git add .
-            git commit -m "push for mohamed"
-            git push 
+            git commit -m "push"
+            git push
+            rm *.gz
 
         - name: Publish Helm Chart to Artifact Registry
           run: |
