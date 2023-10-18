@@ -25,7 +25,7 @@ jobs:
             helm version   
         - name: Set variables
           run: |
-            VER=$(cat helm-base/hello-chart/Chart.yaml | grep "version:"| awk '{print $2}')
+            VER=$(cat hello-chart/Chart.yaml | grep "version:"| awk '{print $2}')
             echo "VERSION=$VER" >> $GITHUB_ENV
             cat $GITHUB_ENV    
         - name: Package Helm Chart
