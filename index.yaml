@@ -3,12 +3,12 @@ entries:
   hello-chart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-18T09:42:13.33563758Z"
+    created: "2023-10-18T10:18:39.4053289Z"
     description: A Helm chart for Kubernetes
-    digest: 2a1b857496aaf9b51503dad5f346ab4ead906cf56c3289a7e5c25aa28318b271
+    digest: 111a7caaf7ad4ba34f082adc24c53fc31759dd27f146e74070a8ce372ba1433a
     name: hello-chart
     type: application
     urls:
-    - hello-chart-0.7.0.tgz
-    version: 0.7.0
-generated: "2023-10-18T09:42:13.334318898Z"
+    - hello-chart-0.8.0.tgz
+    version: 0.8.0
+generated: "2023-10-18T10:18:39.40454469Z"
