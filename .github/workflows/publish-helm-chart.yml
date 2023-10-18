@@ -8,7 +8,6 @@ on:
 jobs:
   
   publish:
-    if: github.event.pull_request.merged == 'true'
     runs-on: ubuntu-latest
 
     steps:
@@ -49,4 +48,3 @@ jobs:
         #      helm push --debug hello-chart-$VERSION.tgz oci://us-central1-docker.pkg.dev/devops-training-330915/helm-base 
         #     # gcloud artifacts repositories create your-repo-name --location=us-central1
             
-
