@@ -35,15 +35,15 @@ jobs:
             git config --global user.email mohamed.morshed@modeso.ch
             git add .
             git commit -m "push"
-            git push
-            rm *.gz
+            git push origin master
+            
 
-        - name: Publish Helm Chart to Artifact Registry
-          run: |
-             export HELM_EXPERIMENTAL_OCI=1
-             gcloud auth print-access-token | helm registry login -u oauth2accesstoken --password-stdin https://us-central1-docker.pkg.dev
-             gcloud auth configure-docker us-central1-docker.pkg.dev
-             helm push --debug hello-chart-$VERSION.tgz oci://us-central1-docker.pkg.dev/devops-training-330915/helm-base 
-            # gcloud artifacts repositories create your-repo-name --location=us-central1
+        # - name: Publish Helm Chart to Artifact Registry
+        #   run: |
+        #      export HELM_EXPERIMENTAL_OCI=1
+        #      gcloud auth print-access-token | helm registry login -u oauth2accesstoken --password-stdin https://us-central1-docker.pkg.dev
+        #      gcloud auth configure-docker us-central1-docker.pkg.dev
+        #      helm push --debug hello-chart-$VERSION.tgz oci://us-central1-docker.pkg.dev/devops-training-330915/helm-base 
+        #     # gcloud artifacts repositories create your-repo-name --location=us-central1
             
 
