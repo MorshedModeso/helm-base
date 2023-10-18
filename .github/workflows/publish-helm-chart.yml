@@ -31,7 +31,7 @@ jobs:
         - name: Publish Helm Chart to Artifact Registry
           run: |
              export HELM_EXPERIMENTAL_OCI=1
-             helm push hello-chart-0.2.0.tgz oci://us-central1-docker.pkg.dev/devops-training-330915/helm-base 
+             helm push --debug hello-chart-0.2.0.tgz oci://us-central1-docker.pkg.dev/devops-training-330915/helm-base 
              gcloud artifacts repositories create your-repo-name --location=us-central1
             
 
