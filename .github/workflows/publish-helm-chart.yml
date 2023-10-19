@@ -39,14 +39,11 @@ jobs:
             skip-checks:true
             "
             git push 
-        - name: push    
-          uses: x-actions/gh-pages@release/v1
-          env:
-            GITHUB_EMAIL: "mohamed.morshed@modeso.ch"
-            GITHUB_USERNAME: "mohamed.morshed"
-            PUBLISH_REPO: https://github.com/MorshedModeso/helm-base.git
-            PUBLISH_BRANCH: master
-                
+                     
+
+        - name: Git Push Action
+          uses: x-actions/git-push@v1.0     
+   
             
             
 
