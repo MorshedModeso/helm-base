@@ -35,7 +35,7 @@ jobs:
             git config --global user.name mohamed.morshed
             git config --global user.email mohamed.morshed@modeso.ch
             git add .
-            git commit -m "skip ci"
+            git commit -m [skip ci]
             git push 
             
             
