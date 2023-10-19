@@ -32,17 +32,22 @@ jobs:
           run: |
             helm package hello-chart 
             helm repo index .
-            git config --global user.name mohamed.morshed
-            git config --global user.email mohamed.morshed@modeso.ch
-            git add .
-            git commit -m "[skip ci][ci skip][no ci][actions skip]
-            skip-checks:true
-            "
-            git push 
+          # git config --global user.name mohamed.morshed
+            # git config --global user.email mohamed.morshed@modeso.ch
+            # git add .
+            # git commit -m "[skip ci][ci skip][no ci][actions skip]
+            # skip-checks:true
+            # "
+            # git push 
                      
 
         - name: Git Push Action
-          uses: x-actions/git-push@v1.0     
+          uses: x-actions/git-push@v1.0 
+          env:
+              GITHUB_EMAIL: "mohamed.morshed@modeso.ch"
+              GITHUB_USERNAME: "mohamed.morshed"
+              PUBLISH_REPO: https://github.com/MorshedModeso/helm-base.git
+              PUBLISH_BRANCH: master    
    
             
             
