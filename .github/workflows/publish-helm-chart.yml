@@ -34,8 +34,8 @@ jobs:
             helm repo index .
           # git config --global user.name mohamed.morshed
             # git config --global user.email mohamed.morshed@modeso.ch
-              git add .
-              git commit -m "[skip ci][ci skip][no ci][actions skip]
+            git add .
+            git commit -m "[skip ci][ci skip][no ci][actions skip]
             # skip-checks:true
             # "
             # git push 
